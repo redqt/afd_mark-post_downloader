@@ -39,9 +39,9 @@ options.set_preference("browser.download.folderList", 2)
 options.set_preference("browser.download.dir", r"D:\downloads")
 options.set_preference("browser.helperApps.neverAsk.saveToDisk", 
     "application/zip,application/octet-stream,image/jpeg,application/vnd.ms-excel,application/pdf")
-
+GECKODRIVER_PATH = r".\geckodriver.exe"  # 修改为你的 geckodriver 实际路径
 # 初始化浏览器
-service = Service(GeckoDriverManager().install())
+service = Service(GECKODRIVER_PATH)
 driver = webdriver.Firefox(service=service, options=options)
 
 try:
